@@ -1,7 +1,7 @@
-class Node3{
+class Node{
     int val;
     Node next;
-    public Node3(int val)
+    public Node(int val)
     {
         this.val=val;
         this.next=null;
@@ -54,7 +54,7 @@ class singly
 
 
 
-public class exam_question {
+public class Main{
     public static void main(String[] args) {
         singly s=new singly();
         s.insertatstart(10);
@@ -67,5 +67,6 @@ public class exam_question {
         s.display();
         s.deleteatend();
         s.display();
-    }
+        
+    }
 }
