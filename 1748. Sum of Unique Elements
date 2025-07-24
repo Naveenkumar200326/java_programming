@@ -1,0 +1,25 @@
+class Solution {
+    public int sumOfUnique(int[] nums) {
+        Set<Integer> seen=new HashSet<>();
+        Set<Integer> seen1=new HashSet<>();
+        for(int i=0;i<nums.length;i++)
+        {
+            if(!seen.contains(nums[i]))
+            {
+                seen.add(nums[i]);
+            }
+            else{
+                seen1.add(nums[i]);
+            }
+        }
+        int sum=0;
+        for (int val : seen) 
+        {
+            if(!seen1.contains(val))
+            {
+            sum += val;
+            }
+        }
+        return sum;
+    }
+}
