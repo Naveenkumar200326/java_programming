@@ -1,0 +1,34 @@
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+       int x=numbers.length;
+        boolean r=false;
+        int res[]=new int[2];
+        int i=0;
+        int j=x-1;
+        while(i<j)
+        {
+            int sum=numbers[i]+numbers[j];
+            if(sum==target && i!=j)
+            {
+                res[0]=i+1;
+                res[1]=j+1;
+                r=true;
+                break;
+            }
+            else if(sum<target)
+            {
+                i++;
+            }
+            else
+            {
+                j--;
+            }
+            if(r)
+            {
+                break;
+            }
+            
+        }
+        return res;
+    }
+}
