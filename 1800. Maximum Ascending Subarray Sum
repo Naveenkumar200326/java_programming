@@ -1,0 +1,33 @@
+class Solution {
+    public int maxAscendingSum(int[] nums) {
+        int x=nums.length;
+        int m=0;
+        int sum=nums[0],maxsum=0,sum1=0;
+        if(x!=1)
+        {
+        for(int i=0;i<x-1;i++)
+        {
+            if(nums[i]<nums[i+1])
+            {
+                sum=sum+nums[i+1];
+                m=sum;
+            }
+            else
+            {
+                m=sum;
+                sum=nums[i+1];
+            
+            }
+            if(m>maxsum)
+            {
+                maxsum=m;
+            }
+           
+        }}
+        else
+        {
+            maxsum=nums[0];
+        }
+        return maxsum;
+    }
+}
