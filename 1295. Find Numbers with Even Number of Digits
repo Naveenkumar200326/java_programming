@@ -1,0 +1,17 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        int x=nums.length;
+        int count=0;
+        for(int i=0;i<x;i++)
+        {
+            int z=nums[i];
+            String str=Integer.toString(z);
+            int t=str.length();
+            if(t%2==0)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+}
