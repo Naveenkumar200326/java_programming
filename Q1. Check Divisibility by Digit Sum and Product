@@ -1,0 +1,24 @@
+class Solution {
+    public boolean checkDivisibility(int n) {
+        int sum=0;
+        int mut=1;
+        int num=0;
+        int y=n;
+        while(n!=0)
+            {
+                num=n%10;
+                sum=sum+num;
+                mut=mut*num;
+                n=n/10;
+            }
+        if(y%(sum+mut)==0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+}
