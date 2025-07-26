@@ -1,0 +1,28 @@
+class Solution {
+    public String firstPalindrome(String[] words) {
+int x=words.length;
+        String r="";
+        String res="";
+        String nor;
+        for(int i=0;i<x;i++)
+        {
+            
+            int y=words[i].length();
+            nor=words[i];
+            
+            for(int j=y-1;j>=0;j--)
+            {
+                res=res+nor.charAt(j);
+            }
+            
+            if(res.equals(nor))
+            {
+               r=words[i];
+               break;
+            }
+            res="";
+        
+        }
+      return r;     
+    }
+}
