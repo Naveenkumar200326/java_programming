@@ -1,0 +1,26 @@
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+        int max=0;
+        int x=sentences.length;
+        for(int i=0;i<x;i++)
+        {
+            int count=0;
+            String str=sentences[i];
+            int y=str.length();
+            for(int j=0;j<y;j++)
+            {
+                if(str.charAt(j)==' ')
+                {
+                    count++;
+                }
+            }
+            if(count>max)
+            {
+                max=count;
+            }
+           
+            
+        }
+        return max+1;
+    }
+}
