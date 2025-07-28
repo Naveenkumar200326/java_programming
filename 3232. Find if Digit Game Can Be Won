@@ -1,0 +1,23 @@
+class Solution {
+    public boolean canAliceWin(int[] nums) {
+        int x=nums.length;
+        boolean res=true;
+        int sum=0,d=0;
+        for(int i=0;i<x;i++)
+        {
+            if(nums[i]<10)
+            {
+            sum=sum+nums[i];
+            }
+            else
+            {
+                d=d+nums[i];
+            }
+        }
+        if(sum==d)
+        {
+            res=false;
+        }
+        return res;
+    }
+}
